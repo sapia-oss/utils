@@ -6,12 +6,11 @@
   <parent>
     <groupId>org.sapia</groupId>
     <artifactId>sapia_utils_parent</artifactId>
-    <version>2.4-SNAPSHOT</version>
+    <version>develop-SNAPSHOT</version>
     <relativePath>../..</relativePath>
   </parent>
 
   <artifactId>sapia_utils</artifactId>
-
 
   <dependencies>
 
@@ -44,7 +43,7 @@
 
 
   <build>
-    <finalName>${artifactId}-${version}</finalName>
+    <finalName>${project.artifactId}-${project.version}</finalName>
     
     <plugins>
 
@@ -58,12 +57,12 @@
       </plugin>
 
       <plugin>
+       <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>2.0.2</version>
         <configuration>
-          <excludes><exclude>**/ApplicationStarter**</exclude></excludes>
-          <source>1.6</source>
-          <target>1.6</target>
+          <excludes>
+            <exclude>**/ApplicationStarter**</exclude>
+          </excludes>
         </configuration>
       </plugin>
     </plugins>
